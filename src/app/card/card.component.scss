@@ -1,0 +1,10 @@
+$margin-side: 40px;
+
+.card {
+  display: flex;
+  justify-content: space-around;
+  border: dashed 1px rgb(100, 100, 100);
+  margin-left: $margin-side;
+  margin-right: $margin-side;
+  margin-top: 5px;
+}
