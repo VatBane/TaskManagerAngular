@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;700&display=swap');
+
+$font: 'Cormorant SC', serif;
+
+body {
+  display: flex;
+  justify-content: center;
+  font-family: $font;
+  background-color: #fcfcfc;
+}

@@ -1,0 +1,29 @@
+$side-margin: 50px;
+
+%flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+:host {
+  @extend %flex;
+  width: 70%
+}
+
+.main {
+  @extend %flex;
+  width: 50%;
+  margin: 100px $side-margin 30px;
+  padding: 10px;
+  border: solid 1px white;
+  border-radius: 30px;
+  background-color: white;
+  box-shadow: 0px 2px 2px 2px rgb(230 230 230);
+}
+
+.content {
+  @extend %flex;
+  width: 80%;
+}
