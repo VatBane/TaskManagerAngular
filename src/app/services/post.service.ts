@@ -11,8 +11,6 @@ export class PostService {
   constructor(private httpClient: HttpClient) { }
 
   getTasks() {
-    let res = this.httpClient.get(this.url)
-    console.log(res);
-    return res;
+    return this.httpClient.get(this.url)
   }
 }

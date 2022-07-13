@@ -5,12 +5,14 @@ import {HttpClientModule} from '@angular/common/http'
 import { AppComponent } from './app.component';
 import { CardComponent } from './card/card.component';
 import { ListComponent } from './list/list.component';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
-    ListComponent
+    ListComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
