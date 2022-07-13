@@ -3,7 +3,9 @@
     <img src="" alt="">
   </div>
   <div>
-    <h4>Task</h4>
+    <h4 *ngFor="let task of tasks.tasks">
+      {{ task.name }}
+    </h4>
   </div>
   <div>
     <img src="" alt="">
