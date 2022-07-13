@@ -1,19 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { PostService } from '../services/post.service';
+import { Component} from '@angular/core';
+import { Input } from '@angular/core';
 
 @Component({
-  selector: 'card',
+  selector: 'app-card',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss'],
 })
-export class CardComponent implements OnInit {
-  tasks: any;
 
-  constructor(private service: PostService) {}
+export class CardComponent {
 
-  ngOnInit(): void {
-    this.service.getTasks().subscribe(response => {
-      this.tasks = response;
-    });
-  }
+  @Input() public task: any;
 }
