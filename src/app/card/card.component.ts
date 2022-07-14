@@ -1,9 +1,13 @@
-import { Component } from "@angular/core";
+import { Component} from '@angular/core';
+import { Input } from '@angular/core';
 
-@Component ({
-  selector: "card",
-  templateUrl: "./card.component.html",
+@Component({
+  selector: 'app-card',
+  templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss'],
 })
 
-export class CardComponent {}
+export class CardComponent {
+
+  @Input() public task: any;
+}
