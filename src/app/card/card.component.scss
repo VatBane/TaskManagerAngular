@@ -23,6 +23,10 @@ $margin-side: 40px;
   margin-left: 1em;
 }
 
+.round:hover {
+  box-shadow: 0 0 1px 1px;
+}
+
 .options-box {
   display: flex;
   margin-right: 1rem;
@@ -30,4 +34,8 @@ $margin-side: 40px;
 
 .options {
   margin: 5px;
+}
+
+.options:hover {
+  transform: scale(1.1);
 }

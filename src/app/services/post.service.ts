@@ -20,7 +20,7 @@ export class PostService {
     })    
   }
 
-  updateTask(obj: any, id: String) {    
-    return this.httpClient.patch(this.url +'/'+id, obj)
+  updateTask(body: any, id: String) {    
+    return this.httpClient.patch(this.url +'/'+id, body)
   }
 }

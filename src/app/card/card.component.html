@@ -1,5 +1,5 @@
 <div class="card" id="{{id}}">
-  <div class="round" [style.border-color]="status ? 'green' : 'red'" (click)="changeStatus($event)"></div>
+  <div class="round" [style.color]="status ? 'green' : 'red'" (click)="changeStatus()"></div>
   <div>
     <h4>
       {{ name }}

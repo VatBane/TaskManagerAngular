@@ -25,7 +25,7 @@ export class CardComponent implements OnInit{
     this.id =  this.task._id;
   }
 
-  async changeStatus(event: any) {
+  async changeStatus() {
     if (this.status == true) {
       this.status = false;
     }
