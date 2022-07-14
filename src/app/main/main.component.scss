@@ -6,17 +6,25 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top:10px;
   width:80%;
   height: 40px;
 }
 
 .input {
+  min-height:25px;
   font-size: 20px;
   border: solid 1px lightgray;
   border-radius: 15px;
   width: 70%;
 }
 
+.input:focus {
+  outline: none;
+  box-shadow: 0 0 2px 2px lightgray;
+}
+
 .submit {
  height: 20px;
+ 
 }

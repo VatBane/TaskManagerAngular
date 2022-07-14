@@ -14,9 +14,9 @@ $side-margin: 50px;
 
 .main {
   @extend %flex;
-  width: 50%;
+  width: 65%;
   margin: 100px $side-margin 30px;
-  padding: 10px;
+  padding: 10px 10px 20px;
   border: solid 1px white;
   border-radius: 30px;
   background-color: white;
