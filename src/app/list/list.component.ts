@@ -19,6 +19,7 @@ export class ListComponent implements OnInit {
 
     const tasks$ = this.service.getTasks();
     this.tasks = await lastValueFrom(tasks$);
+
     console.log(this.tasks);
   }
 }
