@@ -3,6 +3,6 @@
   I am your Task manager
 </h1>
 <div class="input-box">
-  <input class="input" type="text" placeholder="Your task...">
-  <button class="submit" (click)="clickHandler($event)">Submit</button>
+  <input class="input" type="text" placeholder="Your task..." [(ngModel)]="value">
+  <button class="submit" (click)="submitTask($event)">Submit</button>
 </div>

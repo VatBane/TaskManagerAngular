@@ -1,12 +1,12 @@
 <div class="card">
-  <div class="round" [style.border-color]="status ? 'green' : 'red'"></div>
+  <div class="round" [style.border-color]="status ? 'green' : 'red'" (click)="changeStatus()"></div>
   <div>
     <h4>
       {{ name }}
     </h4>
   </div>
   <div class="options-box">
-    <img class="options" src="../../assets/img/edit.png" alt="edit" />
-    <img class="options" src="../../assets/img/delete.png" alt="delete"/>
+    <img class="options" src="../../assets/img/edit.png" alt="edit" (click)="openCard()"/>
+    <img class="options" src="../../assets/img/delete.png" alt="delete" (click)="deleteCard()"/>
   </div>
 </div>

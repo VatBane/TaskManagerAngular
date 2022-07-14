@@ -20,4 +20,14 @@ export class CardComponent implements OnInit{
     this.name = this.task.name;
     this.status = this.task.completed;
   }
+
+  changeStatus() {}
+
+  openCard() {
+
+  }
+
+  deleteCard() {
+    
+  }
 }
