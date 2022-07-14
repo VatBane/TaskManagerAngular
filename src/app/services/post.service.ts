@@ -23,4 +23,11 @@ export class PostService {
   updateTask(body: any, id: String) {    
     return this.httpClient.patch(this.url +'/'+id, body)
   }
+
+  deleteTask(id: String) {
+    console.log(this.url + '/' + id);
+    
+    return this.httpClient.delete(this.url + '/' + id);
+     
+  }
 }

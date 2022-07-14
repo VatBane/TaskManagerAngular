@@ -43,7 +43,12 @@ export class CardComponent implements OnInit{
 
   }
 
-  deleteCard() {
+  async deleteCard(event: any) {
+    document.getElementById(this.id.valueOf())?.remove();
 
+    // need to rewrite server to solve issue
+    const res = this.service.deleteTask(this.id);
+    let result = await firstValueFrom(res);
+    console.log(result);
   }
 }
