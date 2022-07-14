@@ -12,4 +12,7 @@ export class MainComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  clickHandler(event: any) {
+    event.target.blur();
+  }
 }
