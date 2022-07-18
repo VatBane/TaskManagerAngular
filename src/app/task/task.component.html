@@ -6,6 +6,6 @@
   <div class="status">
     Status:<div class="round" (click)="changeStatus()" [style.color]="task.completed ? 'green' : 'red'"></div>
     <button class="submit" type="button" (click)="submitTask($event)">Submit</button>
-
   </div>
+  <div class="close" (click)="closeCard()">Close</div>
 </div>

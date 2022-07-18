@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { lastValueFrom } from 'rxjs';
 import { PostService } from '../services/post.service';
 
@@ -12,9 +12,9 @@ export class TaskComponent implements OnInit {
 
   public task: any;
 
-  constructor(private route: ActivatedRoute, private service: PostService) { }
+  constructor(private route: ActivatedRoute, private router: Router, private service: PostService) { }
 
-  private getInfo = async (id: any) => {
+  private async getInfo(id: any) {
     let res: any;
     res = await lastValueFrom(this.service.getTask(id));
     return res.task;
@@ -45,7 +45,7 @@ export class TaskComponent implements OnInit {
 
     let task: any;
     task = await lastValueFrom(res);
-
+  
     this.task.name = task.task.name;
     this.task._id = task.task._id;
 
@@ -62,4 +62,7 @@ export class TaskComponent implements OnInit {
     }
   }
 
+  closeCard() {
+    this.router.navigate(['/'])
+  }
 }
