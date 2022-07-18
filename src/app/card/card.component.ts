@@ -2,6 +2,7 @@ import { Component, OnInit} from '@angular/core';
 import { Input } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
 import { PostService } from '../services/post.service';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-card',
@@ -17,7 +18,7 @@ export class CardComponent implements OnInit{
   public status: Boolean = false;
   public id: String = '';
 
-  constructor(private service: PostService) { }
+  constructor(private service: PostService, private router: Router) { }
 
   ngOnInit () {
     this.name = this.task.name;
@@ -36,11 +37,10 @@ export class CardComponent implements OnInit{
     const res = this.service.updateTask({"completed": this.status}, this.id);
     let result = await firstValueFrom(res);
     console.log(result);
-    
   }
 
   openCard() {
-
+    this.router.navigate(['/', this.id]);
   }
 
   async deleteCard(event: any) {

@@ -14,6 +14,10 @@ export class PostService {
     return this.httpClient.get(this.url)
   }
 
+  getTask(id: String) {
+    return this.httpClient.get(this.url + '/' + id);
+  }
+
   createTask(value: String) {
     return this.httpClient.post(this.url, {
       name: value,
