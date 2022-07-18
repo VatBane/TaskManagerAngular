@@ -1,3 +1,11 @@
 <div class="wrapper">
-  <h1>{{task.name}}</h1>
+  <span class="name">ID: {{task._id}}</span>
+  <div class="new">
+    Task: <input type="text" [(ngModel)]="task.name">
+  </div>
+  <div class="status">
+    Status:<div class="round" (click)="changeStatus()" [style.color]="task.completed ? 'green' : 'red'"></div>
+    <button class="submit" type="button" (click)="submitTask($event)">Submit</button>
+
+  </div>
 </div>
