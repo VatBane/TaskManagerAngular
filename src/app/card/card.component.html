@@ -1,14 +1,12 @@
-<div class="card">
-  <div>
-    <img src="" alt="">
-  </div>
+<div class="card" id="{{id}}">
+  <div class="round" [style.color]="status ? 'green' : 'red'" (click)="changeStatus()"></div>
   <div>
     <h4>
-      {{ task.name }}
+      {{ name }}
     </h4>
   </div>
-  <div>
-    <img src="" alt="">
-    <img src="" alt="">
+  <div class="options-box">
+    <img class="options" src="../../assets/img/edit.png" alt="edit" (click)="openCard()"/>
+    <img class="options" src="../../assets/img/delete.png" alt="delete" (click)="deleteCard($event)"/>
   </div>
 </div>

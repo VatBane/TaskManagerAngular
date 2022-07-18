@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { lastValueFrom } from 'rxjs';
 import { PostService } from '../services/post.service';
 
 @Component({
@@ -11,9 +12,14 @@ export class ListComponent implements OnInit {
 
   constructor(private service: PostService) {}
 
-  ngOnInit(): void {
-    this.service.getTasks().subscribe(response => {
-      this.tasks = response;
-    });
+  async ngOnInit(): Promise<void> {
+    // this.service.getTasks().subscribe(response => {
+    //   this.tasks = response;
+    // });
+
+    const tasks$ = this.service.getTasks();
+    this.tasks = await lastValueFrom(tasks$);
+
+    console.log(this.tasks);
   }
 }
