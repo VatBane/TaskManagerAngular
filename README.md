@@ -5,4 +5,4 @@ To make requests need to send it to */api/v1/tasks
 
 But now it doesn't work because of JWT
 
-P. S. But in the repo named "TaskManager" is previous version, so it must worked but it is not published.
+P. S. But in the repo named "TaskManager" is previous version, so it must work but it is not published.
